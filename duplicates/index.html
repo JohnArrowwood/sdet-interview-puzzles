@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>You are asked to write a function . . .</h1>
+        <ul>
+            <li> It takes in an array of integers, A </li>
+            <li> It returns a COPY of the array, with any duplicate values removed </li>
+            <li> It is important not to modify the original array in any way </li>
+            <li> Nothing may be assumed about the order of elements - they may be in any order </li>
+            <li> The order of elements should be preserved </li>
+	    <li> Nothing may be assumed about the position of duplicates - they may be immediately following or any number of other numbers in between them </li>
+            <li> If a number does appear two or more times in the list, only the first one should be kept </li>
+        </ul>
+        <form onformsubmit="return false;">
+        <pre class=definition>
+function stripDuplicates( A ) {
+<textarea id=code class=autoExpand rows=5>
+    var result = [];
+
+    // your code goes here
+
+    return result;
+</textarea>}</pre>  
+        <input id=test type=submit value="test">
+        </form>
+
+        <div id=results></div>
+
+        <div id=help>
+            <h4>Not familiar with JavaScript? Here are the basics:</h4>
+            <ul>
+                <li> Declare a local variable: <code><b>var</b> name;</code> or <code><b>var</b> name <b>=</b> value;</code></li>
+                <li> Declare an empty array: <code><b>var</b> a = [];</code> </li>
+                <li> Make a copy of an array: <code><b>var</b> b = a.<b>slice</b>();</code> </li>
+                <li> Push elements onto the array: <code>a.<b>push</b>( value )</code> </li>
+                <li> Access a particular element: <code>a[i]</code> </li>
+                <li> Sort the array by string order: <code>a.<b>sort</b>()</code> </li>
+                <li> Iterate over the elements in the array: <code><b>for</b> ( i <b>in</b> a ) { v = a[i] ... }</code> </li>
+                <li> Declare an empty object / hash-map: <code><b>var</b> h = {};</code> </li>
+                <li> Add a new key/value pair: <code>h.key = "value"</code> or <code>h["key"] = "value"</code> </li>
+                <li> Access the value stored for a particluar key: <code>h.key</code> or <code>h["key"]</code>
+                <li> Test if the key exists already: <code>h.<b>hasOwnProperty</b>( "key" )</code> </li>
+                <li> Iterate over the keys: <code><b>for</b> ( k <b>in</b> h ) { v = h[k] ... }</code> </li>
+                <li> Get the length of a string: <code><b>var</b> s = "foo"; s.<b>length</b> == 3</code> </li>
+                <li> Access the nth character in a string: <code><b>var</b> s = "foo"; s.<b>charAt</b>(0) == "f"</code> </li>
+                <li> Find the first instance of character/substring: <code><b>var</b> s = "foo"; s.<b>indexOf</b>('o') == 1; s.<b>indexOf</b>('x') == -1</code> </li>
+                <li> Replace all instances of character X with character Y: <code>s.<b>replace</b>(/X/g, 'Y' )</code> </li>
+                <li> Convert a string to an array: <code><b>var</b> s = "foo"; <b>var</b> a = s.<b>split</b>(''); // [ 'f', 'o', 'o' ]</code></li>
+                <li> Concatenate the elements of an array into a string: <code>a.<b>join</b>('')</code> </li>
+                <li> Increment/decrement a variable: <code>x += 1</code> or <code>x -= 1</code>
+            </ul>
+        </div>
+        <script src="code.js"></script>
+    </body>
+</html>

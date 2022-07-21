@@ -1,0 +1,58 @@
+html { 
+    margin: 0;
+    padding: 0.5in;
+    padding-top: 0.125in;
+}
+body {
+    font-family: sans-serif;
+    font-size: 10pt;
+    background: #f7f7f7;
+    max-width: 7.5in;
+}
+.definition {
+    background: #e7e7e7;
+    border: 1px solid #cccccc;
+    border-radius: 0.125in;
+    font-size: 110%;
+    padding: 0.25in;
+}
+
+.sidebar {
+    font-size: 8pt;
+    color: gray;
+    padding: 0.125in;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+form {
+    font-size: 12pt;
+}
+textarea {
+    display: block;
+    box-sizing: padding-box;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 12pt;
+
+    margin: 0;
+    padding: 0.125in;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 0.125in;
+}
+code {
+    font-size: 12pt;
+    display: inline-block;
+    background: white;
+    border: 1px solid #f0f0f0;
+    padding: 0;
+    padding-left: 0.125in;
+    padding-right: 0.125in;
+}
+#results {
+    font-size: 16pt;
+    color: red;
+}
+.given, .expected, .actual {
+    font-family: monospace;
+}

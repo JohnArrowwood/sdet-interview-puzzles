@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name=viewport" contents="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/caf595de31.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link 
+            rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+            integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" 
+            crossorigin="anonymous">
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><i id=problem-icon class="fa"></i><span id=problem-name></span></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav mr-auto">
+                  <a id="go-story"    class="nav-item nav-link" href="#" title="User Story">
+                      <i class="fa fa-file-text-o"></i></a>
+                  <a id="go-criteria" class="nav-item nav-link" href="#" title="Acceptance Criteria">
+                      <i class="fa fa-list-ul"></i></a>
+                  <a id="go-tests"    class="nav-item nav-link" href="#" title="Test Cases">
+                      <i class="fa fa-check-square-o"></i></a>
+                  <a id="go-code"     class="nav-item nav-link" href="#" title="Implementation">
+                      <i class="fa fa-code"></i></a>
+                  <a id="go-help"     class="nav-item nav-link" href="#" title="JavaScript Cheat Sheet">
+                      <i class="fa fa-life-ring"></i></a>
+                  <a id="reset"       class="nav-item nav-link" href="#" title="Start Over - forgets both test cases and implementation">
+                      <i class="fa fa-refresh"></i></a>
+                </div>
+              </div>
+        </nav>
+        <section id=sliding-panes>
+            <div class=pane id=user-story>
+                <h1><i class="fa fa-file-text-o"></i>User Story</h1>
+                <div class=scrollable>
+                    <div id=story-text>
+                        <strong>AS A</strong> &lt;role&gt;<br/>
+                        <strong>I WANT</strong> &lt;feature&gt;<br/>
+                        <strong>SO THAT</strong> &lt;benefit&gt;<br/>
+                    </div>
+                    <h2>The Problem</h2>
+                    <ul id=problem-list>
+                        <li> a challenge that the user has </li>
+                    </ul>
+                    <h2>The Need</h2>
+                    <ul id=need-list>
+                        <li> the need that the user would like met </li>
+                    </ul>
+                    <h2>The Ask</h2>
+                    <ul id=ask-list>
+                        <li> the specific thing that would meet the need </li>
+                    </ul>
+                    <div id=hint class="hidden alert alert-secondary" role="alert">
+                        <h4 class="alert-heading">Hints</h4>
+                        <ul id=hint-list>
+                            <li> a helpful hint for how to do this </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class=pane id=acceptance-criteria>
+                <h1><i class="fa fa-list-ul"></i>Acceptance Criteria</h1>
+                <div id=ac-list class=scrollable>
+                    <div class=ac>
+                        <h2>label</h2>
+                        <strong>GIVEN</strong> &lt;precondition&gt;<br/>
+                        <strong>WHEN</strong> &lt;action&gt;<br/>
+                        <strong>THEN</strong> &lt;outcome&gt;
+                    </div>
+                </div>
+                <div id=ac-count><span id=ac-covered>0</span> of <span id=ac-identified>0</span> of <span id=ac-total>0</span></div>
+            </div>
+            <div class=pane id=test-cases>
+                <button id=add-test type="button" class="btn btn-dark">Add</button>
+                <h1><i class="fa fa-check-square-o"></i>Test Cases</h1>
+                <div class=scrollable>
+                    <h2>Input</h2>
+                    <div id=tc-input></div>
+                    <h2>Output</h2>
+                    <div id=tc-output></div>
+                    <table id=tc-list></table>
+                    <div id=tc-feedback></div>
+                </div>
+            </div>
+            <div class=pane id=implementation>
+                <h1><i class="fa fa-code"></i>Implementation</h1>
+                <div id=editor></div>
+                <button type="button" id=test-it class="btn btn-primary">Test</button>
+                <div id=test-results></div>
+            </div>
+            <div class=pane id=help>
+                <h1><i class="fa fa-life-ring"></i>JavaScript CheatSheet</h1>
+                <div class=scrollable>
+                    <dl>
+                        <dt> Declare a local variable</dt>
+                        <dd> <code><b>var</b> name;</code> or <code><b>var</b> name <b>=</b> value;</code></dd>
+
+                        <dt> Declare an empty array </dt>
+                        <dd> <code><b>var</b> a = [];</code> </dd>
+
+                        <dt> Push elements onto the array </dt> 
+                        <dd> <code>a.<b>push</b>( value )</code> </dd>
+
+                        <dt> Access a particular element </dt>
+                        <dd> <code>a[i]</code> </dd>
+
+                        <dt> Sort the array by string order </dt>
+                        <dd> <code>a.<b>sort</b>()</code> </dd>
+
+                        <dt> Iterate over the elements in the array </dt>
+                        <dd> <code><b>for</b> ( i <b>in</b> a ) { v = a[i] ... }</code> </dd>
+
+                        <dt> Make a copy of the array </dt>
+                        <dd> <code><b>var</b> b = a.<b>slice</b>()</code>
+
+                        <dt> Declare an empty object / hash-map </dt>
+                        <dd> <code><b>var</b> h = {};</code> </dd>
+
+                        <dt> Add a new key/value pair </dt>
+                        <dd> <code>h.key = "value"</code> or <code>h["key"] = "value"</code> </dd>
+
+                        <dt> Access the value stored for a particluar key </dt>
+                        <dd> <code>h.key</code> or <code>h["key"]</code> </dd>
+
+                        <dt> Test if the key exists already </dt>
+                        <dd> <code>h.<b>hasOwnProperty</b>( "key" )</code> </dd>
+
+                        <dt> Iterate over the keys </dt>
+                        <dd> <code><b>for</b> ( k <b>in</b> h ) { v = h[k] ... }</code> </dd>
+
+                        <dt> Get the length of a string </dt>
+                        <dd> <code><b>var</b> s = "foo"; s.<b>length</b> == 3</code> </dd>
+
+                        <dt> Access the nth character in a string </dt>
+                        <dd> <code><b>var</b> s = "foo"; s.<b>charAt</b>(0) == "f"</code> </dd>
+
+                        <dt> Find the first instance of character/substring </dt>
+                        <dd> <code><b>var</b> s = "foo"; <br/>s.<b>indexOf</b>('o') == 1 <br/>s.<b>indexOf</b>('x') == -1</code> </dd>
+
+                        <dt> Replace all instances of character X with character Y </dt>
+                        <dd> <code>s.<b>replace</b>(/X/g, 'Y' )</code> </dd>
+
+                        <dt> Convert a string to an array </dt>
+                        <dd> <code><b>var</b> s = "foo"; <br/><b>var</b> a = s.<b>split</b>(''); // [ 'f', 'o', 'o' ]</code> </dd>
+
+                        <dt> Concatenate the elements of an array into a string </dt>
+                        <dd> <code>a.<b>join</b>('')</code> </dd>
+
+                        <dt> Increment/decrement a variable </dt>
+                        <dd> <code>x += 1</code> or <code>x -= 1</code> </dd>
+
+                        <dt> Get or test the type of a variable </dt>
+                        <dd> <code><b>typeof</b> "foo" === "string"</code> and
+                             <code><b>typeof</b> 42 === "number"</code> and
+                             <code><b>typeof</b> {foo:"bar"} === "object"</code> and
+                             <code><b>typeof</b> [1,2,3] === "object"</code> </dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- JavaScript Libraries -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" 
+            crossorigin="anonymous"></script>
+        
+        <script 
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" 
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" 
+            crossorigin="anonymous"></script>
+
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"
+            ></script>
+
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"
+            ></script>
+
+        <!-- problem-specific code -->
+        <script src="problem.js"></script>
+        <script src="user-story.js"></script>
+        <script src="acceptance-criteria.js"></script>
+        <script src="solution.js"></script>
+        <script src="test-case-generator.js"></script>
+
+        <!-- generic interface code -->
+        <script src="polyfill.js"></script> 
+        <script src="code.js"></script>
+
+    </body>
+</html>

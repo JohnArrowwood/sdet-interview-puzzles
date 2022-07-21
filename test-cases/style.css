@@ -1,0 +1,78 @@
+html { 
+    margin: 0;
+    padding: 0.5in;
+    padding-top: 0.125in;
+}
+body {
+    font-family: sans-serif;
+    font-size: 10pt;
+    background: #f7f7f7;
+    max-width: 7.5in;
+}
+.definition {
+    background: #e7e7e7;
+    border: 1px solid #cccccc;
+    border-radius: 0.125in;
+    font-size: 110%;
+    padding: 0.25in;
+}
+
+.sidebar {
+    font-size: 8pt;
+    color: gray;
+    padding: 0.125in;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+form {
+    font-size: 12pt;
+}
+input {
+    font-size: 12pt;
+    background: #ffffff;
+    border: 1px solid silver;
+    border-radius: 5px;
+    text-align: center;
+}
+input:focus {
+    background: #fffff0;
+}
+#score {
+    font-size: 24pt;
+    color: navy;
+}
+#score #total {
+    color: maroon;
+    font-weight: bold;
+    border: 1px solid black;
+    background: white;
+    padding: 0.125in;
+    display: inline-block;
+    border-radius: 0.125in;
+}
+#tests {
+    margin-top: 0.125in;
+    background: white;
+    border: 1px solid gray;
+    width: 100%;
+}
+#tests tr:nth-child(even) {
+    background: white;
+}
+#tests tr:nth-child(odd) {
+    background: #f0f0f0;
+}
+#tests th, #tests td {
+    padding-left: 0.125in;
+    padding-right: 0.125in;
+}
+#tests tr td:nth-child(1) {
+    width: 45%;
+}
+#tests tr td:nth-child(2) {
+    width: 45%;
+}
+#tests tr td:nth-child(3) {
+    width: 10%;
+    text-align: center;
+}

@@ -1,0 +1,299 @@
+html { 
+/*
+    margin: 0;
+    padding: 0.5in;
+    padding-top: 0.125in;
+*/
+}
+body {
+/*
+    font-family: sans-serif;
+    font-size: 10pt;
+    background: #f7f7f7;
+    max-width: 7.5in; 
+*/
+}
+nav.navbar {
+    background: #6495ed !important;
+    font-size: 16pt;
+    block-shadow: 5px 5px 10px black !important;
+}
+.navbar-brand {
+    color: white !important;
+}
+#problem-icon {
+    /*
+    background: #0D3172 !important;
+    color: white !important;
+    */
+    background: white;
+    color: #0d3172;
+    padding: 0.125in;
+    margin-right: 0.125in;
+    border-radius: 50%;
+    font-size: 0.25in;
+    line-height: 0.25in;
+    width: 0.5in;
+    height: 0.5in;
+    display: inline-block;
+    text-align: center;
+}
+#problem-name {
+    color: white !important;
+    text-shadow: 1px 1px 1px black; 
+}
+
+a.nav-item {
+    color: #ccffff !important; */
+}
+
+#sliding-panes {
+    display: block;
+    position: absolute;
+    top: 0.75in;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    white-space: nowrap;
+    overflow: auto;
+    overflow-y: hidden;
+    background: #f0f0f0;
+}
+.pane {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 6in;
+    max-width: 6in;
+    height: calc( 100% - 0.25in );
+    max-height: calc( 100% - 0.25in );
+    min-height: calc( 100% - 0.25in );
+    padding-top: 0.125in;
+    padding-left: 0.25in;
+    padding-right: 0.25in;
+    padding-bottom: 0.125in;
+    margin: 0.125in;
+    height: 100%;
+    background: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px rgba( 0, 0, 0, 0.5 );
+    white-space: normal;
+    overflow: hidden;
+}
+
+.pane h1 {
+    font-size: 0.25in;
+    color: #0D3172;
+    height: 0.625in;
+    border-bottom: 1px solid silver;
+}
+.pane h1 .fa {
+    color: black;
+    font-size: 160%;
+    position: relative;
+    top: 0.15em;
+    margin-right: 0.125in;
+}
+.pane h2 {
+    font-size: 12pt;
+    color: #6495ed;
+}
+.scrollable {
+    position: absolute;
+    bottom: 0.25in;
+    right: 0.25in;
+    left: 0.25in;
+    top: 0.75in;
+    padding-top: 0.125in;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#story-text {
+    font-size: 110%;
+    margin-bottom: 0.125in;
+}
+.ac {
+    position: relative;
+    padding-bottom: 0.125in;
+    border-bottom: 1px solid silver;
+    margin-bottom: 0.125in;
+}
+.ac h2 {
+    font-size: 125%;
+}
+.ac-text {
+    border-left: 1px solid silver;
+    padding-left: 0.125in;
+}
+.ac.hidden {
+    display: none;
+    visibility: hidden;
+}
+.ac.covered {
+    display: block;
+    color: #000066;
+    visibility: visible !important;
+}
+.ac.covered .ac-text {
+    border-left: 1px solid #000066;
+}
+.ac.covered.passed {
+    color: #006600;
+}
+.ac.covered.passed .ac-text {
+    border-left: 1px solid #006600;
+}
+.ac.covered.failed {
+    color: #ff0000;
+}
+.ac.covered.failed .ac-text{
+    border-left: 1px solid #660000;
+}
+.ac.covered:after,
+.ac.covered.passed:after,
+.ac.covered.failed:after {
+    font-family: "FontAwesome";
+    text-shadow: 2px 3px 5px rgba( 0, 0, 0, 0.3 );
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 0.125in;
+    font-size: 0.5in;
+    line-height: 0.5in;
+    visibility: visible;
+}
+.ac.covered:after {
+    content: "\f069";
+    color: blue;
+}
+.ac.covered.passed:after {
+    content: "\f00c";
+    color: green;
+}
+.ac.covered.failed:after {
+    content: "\f00d";
+    color: red;
+}
+
+#test-cases #add-test {
+    position: relative;
+    float: right;
+    top: 0.125in;
+}
+
+table.form { 
+    width: 100%;
+    margin-bottom: 0.125in;
+}
+
+table.form .label {
+    padding-right: 0.125in;
+}
+
+table.form .input {
+    width: 100%;
+}
+table.form .input input {
+    width: 100%;
+}
+input#output {
+    width: 100%;
+}
+
+#tc-output input[type=radio] {
+    margin-left: 0.25in;
+    margin-right: 0.125in;
+}
+
+#tc-list {
+    margin-top: 0.125in;
+    width: 100%;
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+#tc-list th {
+    background: #0D3172;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+#tc-list th,
+#tc-list td {
+    overflow: hidden;
+    padding-left: 0.125in;
+    padding-right: 0.125in;
+}
+#tc-list tr:nth-child(odd) td {
+    background: #f0f0f0;
+}
+#tc-list tr:nth-child(even) td {
+    background: white;
+}
+#tc-list td.result {
+    text-align: center;
+}
+#tc-list .red {
+    color: red;
+}
+#tc-list .green {
+    color: green;
+}
+
+#editor {
+    position: absolute;
+    top: 0.75in;
+    bottom: 0.75in;
+    left: 0.25in;
+    right: 0.25in;
+}
+#test-it {
+    position: absolute;
+    bottom: 0.25in;
+    right: 0.25in;
+}
+
+#test-results, #tc-feedback {
+    font-size: 16pt;
+    border-radius: 3px;
+    padding-left: 0.25in;
+    padding-right: 0.25in;
+    z-index: 999;
+}
+#tc-feedback {
+    position: relative;
+    display: block;
+    width: 100%
+}
+#test-results {
+    display: inline-block;
+    position: absolute;
+    bottom: 0.25in;
+    left: 0.25in;
+    width: 4.75in;
+}
+#tc-feedback.error,
+#test-results.error {
+    color: #660000;
+    background: #fff0f0;
+    border: 1px solid red;
+}
+#tc-feedback.success,
+#test-results.success {
+    color: #006600;
+    background: #f0fff0;
+    border: 1px solid green;
+}
+#ac-count {
+    font-size: 8pt;
+    color: silver;
+    position: absolute;
+    top: 0.25in;
+    right: 0.25in;
+}
+.hidden {
+    visibility: hidden;
+}

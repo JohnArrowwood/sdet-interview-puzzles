@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>You are asked to test a function . . .</h1>
+        <pre class=definition>
+type tiny : signed char; // 8 bits, values between -128 .. 127
+def SumOf( A : tiny, B : tiny ) : tiny </pre>  
+        <ul>
+            <li> It takes in two tiny signed 8-bit integers, A and B </li>
+            <li> It returns a tiny signed 8-bit integer </li>
+            <li> The return value is the sum of the inputs </li>
+            <li> Invalid conditions should result in an error </li>
+        </ul>
+        <div class=sidebar>
+            Yes, this is a contrived test case.  
+            You're right, no one in their right mind would write this function.
+        </div>
+        <p>
+            You are being asked to validate this function.  Your goal is to test 
+            all the ways this function might go wrong, in as few test cases as possible.
+        </p>
+        <p>
+            Add as many test cases as you think it will take, then check your work.
+            Points are added for each distinct test case category that you hit.  Points
+            are deducted for unnecessary or redundant test cases.  How high can you score?
+        </p>
+        <form>
+            <code>SumOf</code> <input id=A placeholder="A" type=text size=4> and 
+            <input id=B placeholder="B" type=text size=4> equals 
+            [
+            <input id=C placeholder="C" type=text size=4> 
+            or 
+            <input id=error type=checkbox> error ]
+            // <input id=comment type=text placeholder="Comment" size=15>
+            <input id=add type=submit value="add test">
+        </form>
+
+        <div id=score>Total Score <span id=total>0</span></div>
+        <table id=tests>
+            <col><col>
+            <tr>
+                <th>test case</th>
+                <th>comment</th>
+                <th>score</th>
+            </tr>
+        </table>
+        <script src="code.js"></script>
+    </body>
+</html>
